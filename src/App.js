@@ -22,8 +22,8 @@ export const App = () => {
     <BrowserRouter>
     <Header />
     <Routes>
-    <Route path="/" element={<List pokemons={list}/>} />
-    <Route path="/details/:pokemonName" element={<Details />}/>
+    <Route path="/" element={<List pokemons={list}/>}/>
+    <Route path="/details/:pokemonName" element={<Details/>}/>
     </Routes>
     </BrowserRouter>
   )

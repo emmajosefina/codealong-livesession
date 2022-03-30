@@ -13,7 +13,15 @@ const Details = () => {
         fetch(SINGLE_POKEMON_URL(pokemonName)).then(res => res.json()).then(data => setDetails(data))
     }, [])
 console.log(details)
-    return <div>{details.name}</div>
+    return (
+<div>
+        <h2>{details.name}</h2>
+        {/* <img src={details.sprites.other["official-artwork"].front_default} />
+
+        <img src={details.sprites ?  details.sprites.other["official-artwork"].front_default : ""}/> */}
+        <img src={details.sprites ? details.sprites.other["official-artwork"].front_default : ""}/>
+        </div>
+    )
 }
 
 export default Details
